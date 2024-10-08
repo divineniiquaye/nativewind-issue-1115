@@ -1,0 +1,19 @@
+{
+  "extends": "@repo/typescript-config/expo.json",
+  "compilerOptions": {
+    "strict": true,
+    "jsxImportSource": "nativewind",
+    "jsx": "preserve",
+    "paths": {
+      "@/assets/*": ["./assets/*"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+  ]
+}
