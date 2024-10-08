@@ -3,9 +3,12 @@
 import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 import { AlertTriangle } from "lucide-react-native";
 import { toast } from "sonner-native";
+import React from "react";
 
 import { Alert, AlertDescription, AlertTitle } from "@repo/ui/themed/alert";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useColorScheme } from "@repo/ui/hooks/useColorScheme";
+import { Calendar } from "@repo/ui/themed/calender";
 import { Button } from "@repo/ui/themed/button";
 import { Text } from "@repo/ui/themed/text";
 import {
@@ -17,7 +20,10 @@ import {
 } from "@repo/ui/themed/select";
 
 export default function Web() {
-  const { setColorScheme } = useColorScheme();
+  const { isDarkColorScheme, setColorScheme } = useColorScheme();
+  const insets = useSafeAreaInsets();
+  
+  const [selectedDate, setSelectedDate] = React.useState('');
 
   return (
     <div className="flex flex-1 mt-10 flex-col text-center items-center">
@@ -43,6 +49,18 @@ export default function Web() {
       >
         <Text className="">Boop</Text>
       </Button>
+      <Calendar
+        onDayPress={(day) => {
+          setSelectedDate(day.dateString);
+        }}
+        markedDates={{
+          [selectedDate]: {
+            selected: true,
+            disableTouchEvent: true,
+            selectedColor: isDarkColorScheme ? '#0ea5e9' : '#0284c7',
+          },
+        }}
+      />
       <div className="mt-10 space-y-2">
         <Text className="text-center text-muted-foreground pb-2">Theme Switch</Text>
         <Select

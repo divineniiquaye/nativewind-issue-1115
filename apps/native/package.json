@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "expo start -g",
     "build": "expo prebuild",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "eject": "expo eject",
     "lint": "eslint .",
     "test": "jest --ci",

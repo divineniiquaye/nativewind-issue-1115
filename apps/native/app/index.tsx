@@ -3,9 +3,11 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AlertTriangle } from "lucide-react-native";
 import { Platform, View } from "react-native";
 import { toast } from "sonner-native";
+import React from "react";
 
 import { Alert, AlertDescription, AlertTitle } from "@repo/ui/themed/alert";
 import { useColorScheme } from "@repo/ui/hooks/useColorScheme";
+import { Calendar } from "@repo/ui/themed/calender";
 import { Button } from "@repo/ui/themed/button";
 import { Text } from "@repo/ui/themed/text";
 import ScreenLayout from "@repo/ui/layout";
@@ -18,8 +20,10 @@ import {
 } from "@repo/ui/themed/select";
 
 export default function Native() {
-  const { setColorScheme } = useColorScheme();
+  const { isDarkColorScheme, setColorScheme } = useColorScheme();
   const insets = useSafeAreaInsets();
+  
+  const [selectedDate, setSelectedDate] = React.useState('');
 
   const contentInsets = {
     top: insets.top,
@@ -53,6 +57,18 @@ export default function Native() {
       >
         <Text>Boop</Text>
       </Button>
+      <Calendar
+        onDayPress={(day) => {
+          setSelectedDate(day.dateString);
+        }}
+        markedDates={{
+          [selectedDate]: {
+            selected: true,
+            disableTouchEvent: true,
+            selectedColor: isDarkColorScheme ? '#0ea5e9' : '#0284c7',
+          },
+        }}
+      />
       <View className="mt-10">
         <Text className="text-center text-muted-foreground pb-2">Theme Switch</Text>
         <Select
