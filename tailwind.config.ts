@@ -9,8 +9,8 @@ const config: Pick<
 > = {
     content: [
         "./app/**/*.tsx",
-        "../../packages/ui/**/*.tsx",
-        "!../../packages/ui/**/node_modules/**",
+        "./packages/ui/**/*.tsx",
+        "!./packages/ui/**/node_modules/**",
     ],
     plugins: [require("tailwindcss-animate")],
     presets: [require("nativewind/preset")],

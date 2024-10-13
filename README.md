@@ -1,33 +1,28 @@
-# Turborepo react-native starter
+## Getting Started
 
-This is an official starter Turborepo.
+First, run the development server:
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e https://github.com/divineniiquaye/pho-monorepo -m pnpm
+```bash
+yarn dev
 ```
 
-## What's inside?
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This Turborepo includes the following packages/apps:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Apps and Packages
+To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
 
--   `native`: a [react-native](https://reactnative.dev/) app built with [expo](https://docs.expo.dev/)
--   `web`: a [Next.js](https://nextjs.org/) app built with [react-native-web](https://necolas.github.io/react-native-web/)
--   `@repo/ui`: a stub [react-native](https://reactnative.dev/) component library shared by both `web` and `native` applications
--   `@repo/tailwind-config`: `tailwind.config.js`s used throughout the monorepo
--   `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## Learn More
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+To learn more about Next.js, take a look at the following resources:
 
-### Utilities
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
 
-This Turborepo has some additional tools already setup for you:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
--   [Expo](https://docs.expo.dev/) for native development
--   [TypeScript](https://www.typescriptlang.org/) for static type checking
--   [Prettier](https://prettier.io) for code formatting
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

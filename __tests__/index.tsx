@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import { toast } from "sonner-native";
 
-import Web from "../app/page";
+import Web from "./app/page";
 
 // Mock the dependencies
 jest.mock("lucide-react-native", () => ({ AlertTriangle: () => <svg /> }));

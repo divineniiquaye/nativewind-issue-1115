@@ -1,27 +1,59 @@
 {
-  "name": "myapp",
+  "name": "web",
+  "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@9.11.0",
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "patch": "npx pnpm-patch-i",
-    "watchman": "watchman watch-del './' ; watchman watch-project './'",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest --ci",
+    "clean": "rm -rf .next dist node_modules"
   },
-  "nohoist": [
-    "**/expo-router",
-    "**/expo-router/**"
-  ],
+  "dependencies": {
+    "@expo/next-adapter": "6.0.0",
+    "@legendapp/state": "3.0.0-beta.4",
+    "@react-native/assets-registry": "0.75.4",
+    "@repo/ui": "workspace:*",
+    "expo": "51.0.36",
+    "lucide-react-native": "0.447.0",
+    "nativewind": "4.1.10",
+    "next": "14.2.14",
+    "raf": "3.4.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-mobile-app-button": "1.2.18",
+    "react-native": "0.75.4",
+    "react-native-gesture-handler": "2.20.0",
+    "react-native-reanimated": "3.15.4",
+    "react-native-safe-area-context": "4.11.0",
+    "react-native-web": "0.19.12",
+    "sonner-native": "0.15.0",
+    "tailwind-variants": "0.2.1",
+    "tailwindcss-animate": "1.0.7"
+  },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "turbo": "^2.1.2"
-  },
-  "engines": {
-    "node": ">=20"
+    "@babel/core": "7.25.7",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "16.0.1",
+    "@testing-library/react-native": "12.7.2",
+    "@types/jest": "29.5.13",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "@types/react-test-renderer": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.14",
+    "jest": "29.7.0",
+    "postcss": "8.4.47",
+    "react-native-css-interop": "0.1.9",
+    "react-test-renderer": "18.3.1",
+    "tailwindcss": "3.4.13",
+    "typescript": "5.6.2",
+    "webpack": "5.95.0"
   },
   "pnpm": {
     "patchedDependencies": {
