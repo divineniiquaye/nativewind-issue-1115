@@ -17,7 +17,7 @@
     "@repo/ui": "workspace:*",
     "expo": "51.0.36",
     "lucide-react-native": "0.447.0",
-    "nativewind": "4.1.10",
+    "nativewind": "4.1.16",
     "next": "14.2.14",
     "raf": "3.4.1",
     "react": "18.3.1",
