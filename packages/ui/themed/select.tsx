@@ -1,9 +1,9 @@
 import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 import { Check, ChevronDown, ChevronUp } from "lucide-react-native";
+import * as SelectPrimitive from "@rn-primitives/select";
 import { StyleSheet, View } from "react-native";
 import * as React from "react";
 
-import * as SelectPrimitive from "../primitives/select";
 import isWeb from "../hooks/isWeb";
 import { cn } from "../lib/utils";
 

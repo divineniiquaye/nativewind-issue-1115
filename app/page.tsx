@@ -6,7 +6,6 @@ import { toast } from "sonner-native";
 import React from "react";
 
 import { Alert, AlertDescription, AlertTitle } from "@repo/ui/themed/alert";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useColorScheme } from "@repo/ui/hooks/useColorScheme";
 import { Calendar } from "@repo/ui/themed/calender";
 import { Button } from "@repo/ui/themed/button";
@@ -21,7 +20,6 @@ import {
 
 export default function Web() {
   const { isDarkColorScheme, setColorScheme } = useColorScheme();
-  const insets = useSafeAreaInsets();
   
   const [selectedDate, setSelectedDate] = React.useState('');
 
